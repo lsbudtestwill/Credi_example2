@@ -104,14 +104,14 @@ input,select,textarea{border-radius:12px;padding:11px 14px;border-color:#d5dce6}
 .k{position:relative;overflow:hidden}.k small{font-weight:600}.k b{font-size:38px;margin:2px 0}.k svg{position:absolute;right:16px;bottom:16px;width:80px;height:24px;opacity:.55}
 th{text-transform:none}tr:hover>td{background:#f8fafc}
 td{border-bottom-color:var(--ln)}
-main{max-width:1320px;margin:0 auto;padding:28px 24px 64px}
+main{max-width:1680px;margin:0 auto;padding:28px 24px 64px}
 main>*{animation:up .45s both}
 @keyframes up{from{opacity:0;transform:translateY(14px)}}
 .pgh{margin:18px 0 26px}
 .eb{display:inline-block;background:#e4ebf4;color:var(--b);font-size:12px;font-weight:700;padding:4px 12px;border-radius:999px;margin-bottom:12px}.eb.w{background:#ffffff1f;color:#fff}
 /* floating nav */
 .top{display:block;position:sticky;top:12px;margin:12px 16px 0;padding:0;border:1px solid var(--ln);border-radius:22px;background:#ffffffe6;backdrop-filter:blur(14px);box-shadow:0 8px 30px -12px #07264E33;z-index:50}
-.tbar{max-width:1320px;margin:auto;display:flex;align-items:center;gap:8px;padding:10px 16px}
+.tbar{max-width:1680px;margin:auto;display:flex;align-items:center;gap:8px;padding:10px 16px}
 .tbar>[data-logo]{margin-right:14px}.sp{flex:1}
 .cc{font-size:13px;color:var(--m);font-weight:600}
 #nv{display:flex;gap:2px}
@@ -170,6 +170,12 @@ main>*{animation:up .45s both}
 @media(max-width:1100px){.cc{display:none}}
 @media(max-width:900px){#bg{display:inline-flex;margin-left:auto}.tbar{flex-wrap:wrap}.sp{display:none}#nv{display:none;width:100%;flex-direction:column;order:9;padding:8px 0}.top.open #nv{display:flex}.gb{width:100%;justify-content:space-between}.mm{position:static;display:none;width:100%;box-shadow:none;border:0;padding:4px 0;grid-template-columns:1fr}.gp.open .mm{display:grid}.ft{display:none}.hero,.tb{grid-template-columns:1fr}.hero{padding:28px}.auth{grid-template-columns:1fr}.al{display:none}.auth form>[data-logo]{display:block}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+/* layout fix: the app shell must stack the nav above the page (it was still a flex row) */
+#ap{display:block}
+.gb,.cc,.tbar small{white-space:nowrap}
+.mp{grid-template-columns:1fr 340px}
+.mc{height:calc(100vh - 240px);min-height:520px}
+@media(max-width:900px){.mp{grid-template-columns:1fr}.mc{height:60vh;min-height:420px}}
 </style></head><body>
 
 <div class="auth" id="li"><form onsubmit="login(event)">
